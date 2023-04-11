@@ -718,7 +718,7 @@ public class Main {
                 filteredGoods = (ArrayList<Goods>) filteredGoods.stream().filter(f -> {
                     String[] s = changeDescription.getText().toLowerCase(Locale.ROOT).split(" ");
                     for (String str:s)
-                        if (f.getDescription().toLowerCase(Locale.ROOT).matches("\\D*" + str + "\\D*"))
+                        if (f.getDescription().toLowerCase(Locale.ROOT).matches(".*" + str + ".*"))
                             return true;
                     return false;
                 }).collect(Collectors.toList());
